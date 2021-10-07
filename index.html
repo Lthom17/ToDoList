@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col">
+        </div>
+        <div class="col">
+          <h1 class='text-center' style='font-family: Sriracha, cursive;'>ToDo List</h1>
+        </div>
+        <div class="col">
+        </div>
+        </div>
+      <form class="row g-3 needs-validation" id='myForm' novalidate>
+        <label for="task" class="form-label">Task</label>
+        <div class="input-group mb-3">
+
+           <input type="text" class="form-control" id='task' required pattern="[^0-9]*" aria-describedby="inputGroupPrepend" required>
+           <div class="invalid-feedback">
+             Please enter a task.
+           </div>
+        </div>
+
+    <!---  <form class="row g-3 needs-validation" novalidate>--->
+        <label for="days_to_complete" class="form-label">Deadline Date</label>
+          <div class="input-group mb-3">
+
+          <!---<input type='text' class="form-control" id='days_to_complete' required pattern="[0-9]*" aria-describedby="inputGroupPrepend" required>
+           <div id='number_of_days' class="invalid-feedback">
+             Please enter the number of days. Number must be at least 1.
+           </div>--->
+
+           <input type='date' class="form-control" id='date_to_complete'  aria-describedby="calendarDate" required>
+           <div id='date _of_completion' class="invalid-feedback">
+             Please enter a date that is in the future.
+           </div>
+          </div>
+       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+           <button type="submit" class="btn btn-primary" id='myBtn'>Submit</button>
+       </div>
+    </form>
+      <hr>
+   </div>
+   <div class='container'>
+     <div class='row' id='alert_area'>
+      <div class='col' id='col1'></div>
+      <div class='col' id='col2'></div>
+      <div class='col' id='col3'></div>
+      <div class='col' id='col4'></div>
+      <div class='col' id='col5'></div>
+     </div>
+   </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src='script3.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
